@@ -39,8 +39,16 @@ const userSchema = new mongoose.Schema({
                 required: true,
             }
         }
-    ]
+    ],
+    subscriptions: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Subscription",
+        },
+      ],
 });
+
+
 
 
 
